@@ -85,7 +85,7 @@ public class DoubleLinkedList {
     }
 
 
-    public Node deleteFirst(){
+    public void deleteFirst(){
         if (isEmpty()){
             throw new NoSuchElementException();
         }
@@ -94,17 +94,19 @@ public class DoubleLinkedList {
             tail = null;
         }else{
            //aquí es donde no sé cómo poner head.next.previous = null con getters y setters
+            //head = head.getNext();
+            head.setPrevious(null);
+            //head.setNext(null);
 
-            //problema
         }
         //head = head.getNext();
-        head.setNext(head);
+        head = head.getNext();
+        //temp = temp.getNext();
         temp.setNext(null);
         size--;
-        return temp;
     }
 
-
+    /*
     public static void main(String[] args) {
         // Create an empty linked list
         DoubleLinkedList linked_list = new DoubleLinkedList();
@@ -117,9 +119,14 @@ public class DoubleLinkedList {
         linked_list.insertLast(8);
         linked_list.insertLast(9);
         linked_list.insertLast(1);
+        linked_list.insertLast(1);
 
         linked_list.displayForward();
+
+        //para eliminar los primeros tres elementos
         linked_list.deleteFirst();
+        linked_list.deleteFirst();
+
         linked_list.displayForward();
         //linked_list.displayBackward();
         // Get and print the size of the list.
@@ -128,5 +135,5 @@ public class DoubleLinkedList {
         System.out.println(size);
     }
 
-
+*/
 }
