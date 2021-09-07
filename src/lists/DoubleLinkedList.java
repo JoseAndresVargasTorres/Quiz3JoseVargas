@@ -95,7 +95,7 @@ public class DoubleLinkedList {
         }else{
            //aquí es donde no sé cómo poner head.next.previous = null con getters y setters
 
-
+            //problema
         }
         //head = head.getNext();
         head.setNext(head);
