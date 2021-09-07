@@ -14,7 +14,12 @@ public class DoubleLinkedList {
         this.tail = null;
         this.size = 0;
     }
-
+    public void setHead(){
+        this.head = head;
+    }
+    public Node getHead(){
+        return this.head;
+    }
     public boolean isEmpty() {
 
         return size == 0;//head == null

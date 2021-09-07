@@ -14,4 +14,48 @@ public class Queue {
 
 
      */
+
+    private DoubleLinkedList queueList;
+
+    //Metodo constructor
+    public Queue(){
+
+        queueList = new DoubleLinkedList();
+    }
+    public void enqueue(Object newElement){
+        this.queueList.insertLast(newElement);
+
+    }
+    public void dequeue(){
+        this.queueList.deleteFirst();
+    }
+
+    public Node peak(){
+        return this.queueList.getHead();
+    }
+    public void show(){
+        this.queueList.displayForward();
+    }
+    public int size(){
+        return this.queueList.size();
+    }
+
+    public static void main(String[] args) {
+        Queue queue = new Queue();
+        queue.enqueue(5);
+        queue.enqueue(8);
+        queue.enqueue(3);
+        queue.enqueue(12);
+        queue.enqueue(0);
+        queue.enqueue(89);
+        queue.enqueue(77);
+        queue.show();
+        queue.size();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.show();
+        queue.size();
+    }
 }
