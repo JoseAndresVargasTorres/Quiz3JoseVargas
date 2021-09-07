@@ -36,7 +36,8 @@ public class Queue {
     public void show(){
         this.queueList.displayForward();
     }
-    public int size(){
+    public int size() {
+
         return this.queueList.size();
     }
 
@@ -49,13 +50,21 @@ public class Queue {
         queue.enqueue(0);
         queue.enqueue(89);
         queue.enqueue(77);
+
+        //queue.size();
         queue.show();
-        queue.size();
+        System.out.println("Size: "+ queue.size());
 
         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
+
         queue.show();
-        queue.size();
+        System.out.println("Size: " + queue.size());
+
+        Node first_node = queue.peak();
+        int element = (int) first_node.getData();
+        System.out.println("First element:  "+ element);
+
     }
 }
