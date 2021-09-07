@@ -68,3 +68,7 @@ public class Queue {
 
     }
 }
+/*Los resultados que se obtuvieron sí son los esperados, por lo tanto
+se concluye que los métodos del queue, provenientes de una double linked list, funcionan
+perfectamente
+ */
