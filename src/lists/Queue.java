@@ -55,6 +55,10 @@ public class Queue {
         queue.show();
         System.out.println("Size: "+ queue.size());
 
+        Node first_node = queue.peak();
+        int element = (int) first_node.getData();
+        System.out.println("First element:  "+ element);
+
         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
@@ -62,9 +66,9 @@ public class Queue {
         queue.show();
         System.out.println("Size: " + queue.size());
 
-        Node first_node = queue.peak();
-        int element = (int) first_node.getData();
-        System.out.println("First element:  "+ element);
+        Node first_node2 = queue.peak();
+        int element2 = (int) first_node2.getData();
+        System.out.println("First element:  "+ element2);
 
     }
 }
