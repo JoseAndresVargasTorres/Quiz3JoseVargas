@@ -83,7 +83,7 @@ public class DoubleLinkedList {
         }
         Node temp = tail;
         while(temp != null){
-            System.out.print(temp.toString2());
+            System.out.print(temp.toString());
             temp = temp.getPrevious();
         }
         System.out.println();

@@ -42,9 +42,6 @@ public class Node {
         String sNode = "["+this.getData() + "]-->";
         return sNode;
     }
-    public String toString2(){//clase nodo basica
-        String sNode = "["+this.getData() + "]<--";
-        return sNode;
-    }
+
 
 }
